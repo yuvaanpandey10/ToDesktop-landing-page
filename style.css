@@ -3,10 +3,13 @@
 @import "tailwindcss";
 
 @theme {
-  --font-heading: "Inter", sans-serif;
+  --font-heading: [ "Poppins", sans-serif];
 
   /* Custom colors */
   /* --color-primary: #ee0181;
   --color-secondary: #01ee91;
  */
+}
+body {
+  font-family: "Inter", sans-serif;
 }
