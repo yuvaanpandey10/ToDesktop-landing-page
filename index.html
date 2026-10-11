@@ -11,6 +11,35 @@
     />
   </head>
   <body>
-    <script type="module" src="/script.js"></script>
+    <!-- Navbar -->
+    <nav class="p-3 flex bg-white justify-between items-center">
+      <a href="#" id="brand" class="flex items-center gap-2">
+        <img
+          class="object-cover max-w-12 max-h-12"
+          src="./assets/logo.png"
+          alt="logo"
+        />
+        <span class="text-lg font-medium font-display">ToDesktop</span>
+      </a>
+      <div id="nav-menu" class="hidden md:flex gap-12 items-center">
+        <a href="#" class="font-medium hover:text-primary">Pricing</a>
+        <a href="#" class="font-medium hover:text-primary">Docs</a>
+        <a href="#" class="font-medium hover:text-primary">Changing</a>
+        <a href="#" class="font-medium hover:text-primary">Blogs</a>
+        <a href="#" class="font-medium hover:text-primary">Login</a>
+      </div>
+
+      <button
+        class="hidden md:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"
+      >
+        <img src="./assets/logo.svg" class="w-6 h-6" alt="Electron Logo" />
+        <span>Electron Developers</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="md:hidden p-2 cursor-pointer" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+    </nav>
+    <script src="/script.js"></script>
   </body>
 </html>
