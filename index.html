@@ -39,6 +39,56 @@
       <button class="md:hidden p-2 cursor-pointer" onclick="handleMenu()">
         <i class="fa-solid fa-bars text-gray-600"></i>
       </button>
+
+      <div id="nav-dialog" class="fixed z-50 md:hidden hidden bg-white inset-0 p-3">
+        <div id="nav-bar" class="flex justify-between">
+          <a href="#" id="brand" class="flex items-center gap-2">
+            <img
+              class="object-cover max-w-12 max-h-12"
+              src="./assets/logo.png"
+              alt="logo"
+            />
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+          </a>
+          <button class="md:hidden p-2 cursor-pointer" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+        <div class="mt-6">
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Docs</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Changing</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Blogs</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Login</a
+          >
+        </div>
+        <div class="h-px bg-gray-300"></div>
+        <button
+          class="mt-6 w-full flex gap-2 items-center px-6 py-4 rounded-lg hover:bg-gray-50"
+        >
+          <img src="./assets/logo.svg" class="w-6 h-6" alt="Electron Logo" />
+          <span>Electron Developers</span>
+        </button>
+      </div>
     </nav>
     <script src="/script.js"></script>
   </body>
