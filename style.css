@@ -6,9 +6,7 @@
   --font-display: [ "Poppins", sans-serif];
 
   /* Custom colors */
-  /* --color-primary: #ee0181;
-  --color-secondary: #01ee91;
- */
+  --color-primary: #3238f2;
 }
 body {
   font-family: "Inter", sans-serif;
