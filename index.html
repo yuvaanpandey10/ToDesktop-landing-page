@@ -21,7 +21,7 @@
         />
         <span class="text-lg font-medium font-display">ToDesktop</span>
       </a>
-      <div id="nav-menu" class="hidden md:flex gap-12 items-center">
+      <div id="nav-menu" class="hidden lg:flex gap-12">
         <a href="#" class="font-medium hover:text-primary">Pricing</a>
         <a href="#" class="font-medium hover:text-primary">Docs</a>
         <a href="#" class="font-medium hover:text-primary">Changing</a>
@@ -30,17 +30,20 @@
       </div>
 
       <button
-        class="hidden md:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"
+        class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"
       >
         <img src="./assets/logo.svg" class="w-6 h-6" alt="Electron Logo" />
         <span>Electron Developers</span>
         <i class="fa-solid fa-arrow-right"></i>
       </button>
-      <button class="md:hidden p-2 cursor-pointer" onclick="handleMenu()">
+      <button class="lg:hidden p-2 cursor-pointer" onclick="handleMenu()">
         <i class="fa-solid fa-bars text-gray-600"></i>
       </button>
 
-      <div id="nav-dialog" class="fixed z-50 md:hidden hidden bg-white inset-0 p-3">
+      <div
+        id="nav-dialog"
+        class="fixed z-50 lg:hidden hidden bg-white inset-0 p-3"
+      >
         <div id="nav-bar" class="flex justify-between">
           <a href="#" id="brand" class="flex items-center gap-2">
             <img
@@ -50,7 +53,7 @@
             />
             <span class="text-lg font-medium font-display">ToDesktop</span>
           </a>
-          <button class="md:hidden p-2 cursor-pointer" onclick="handleMenu()">
+          <button class="lg:hidden p-2 cursor-pointer" onclick="handleMenu()">
             <i class="fa-solid fa-xmark text-gray-600"></i>
           </button>
         </div>
