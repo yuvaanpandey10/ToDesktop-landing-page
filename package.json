@@ -1,13 +1,15 @@
 {
   "name": "tailwind-practice",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tailwind landing page practice project",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"No tests configured\""
   },
   "devDependencies": {
     "tailwind": "^4.0.0"
