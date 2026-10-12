@@ -500,7 +500,7 @@
               >
                 <img
                   class="w-12 h-12 md:h-16 md:w-16"
-                  src="./assets/asset6.avif"
+                  src="./assets/assets29.avif"
                   alt=""
                 />
                 <span class="text-[12px] md:text-[16px] font-semibold"
@@ -524,7 +524,7 @@
               >
                 <img
                   class="w-12 h-12 md:h-16 md:w-16"
-                  src="./assets/asset8.avif"
+                  src="./assets/asset32.avif"
                   alt=""
                 />
                 <span class="text-[12px] md:text-[16px] font-semibold"
@@ -724,6 +724,138 @@
         <p class="font-semibold text-center leading-tight text-[10px] sm:text-base">
           Upload your<br />app icon
         </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="step-2"
+  class="mt-6 lg:mt-10 rounded-xl border border-gray-200 bg-gray-50 px-5 py-10 sm:px-10 sm:py-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-hidden"
+>
+  <!-- Left: text -->
+  <div class="flex flex-col min-w-0">
+    <!-- Badge + animated "Optional" hint -->
+    <div class="relative w-fit">
+      <span
+        class="block w-fit px-3 py-1 rounded-lg border border-yellow-300 bg-yellow-100 text-yellow-900 font-semibold"
+      >
+        Step 2
+      </span>
+
+      <div
+        class="step2-hint absolute left-[calc(100%-28px)] -top-[43px] pointer-events-none select-none"
+        aria-hidden="true"
+      >
+        <svg width="72" height="40" viewBox="0 0 72 40" fill="none">
+          <defs>
+            <linearGradient id="hintGrad" gradientUnits="userSpaceOnUse" x1="66" y1="28" x2="10" y2="30">
+              <stop offset="0" stop-color="#e5e7eb" />
+              <stop offset="1" stop-color="#9ca3af" />
+            </linearGradient>
+          </defs>
+          <!-- half anti-clockwise arc -->
+          <path class="step2-hint-path" pathLength="1" d="M66 28 C 58 10, 28 6, 10 30" stroke="url(#hintGrad)" stroke-width="2" stroke-linecap="round" />
+          <!-- arrow head -->
+          <path class="step2-hint-path" pathLength="1" d="M10.3 21 L10 30 L18.5 27.2" stroke="url(#hintGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="absolute left-[62px] top-[44px] whitespace-nowrap font-semibold tracking-wide text-sm sm:text-base text-[#c3c4cb]">
+          Optional
+        </span>
+      </div>
+    </div>
+
+    <h3
+      class="mt-8 lg:mt-12 text-3xl sm:text-4xl xl:text-5xl font-display font-bold text-gray-900 leading-tight"
+    >
+      Add desktop code to customise your web app
+    </h3>
+
+    <p class="mt-6 lg:mt-8 text-lg sm:text-xl text-gray-800 max-w-md">
+      No need to create a new repository, just add code from our desktop APIs
+      to your codebase and get access to system level functionality.
+    </p>
+
+    <ul class="mt-8 lg:mt-12 grid grid-cols-1 min-[440px]:grid-cols-2 gap-x-6 gap-y-5 max-w-lg">
+      <li class="flex items-start gap-3">
+        <i class="fa-solid fa-check text-gray-500 mt-2 text-sm"></i>
+        <span class="text-lg sm:text-xl border-b border-gray-400 leading-snug">Native notifications</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <i class="fa-solid fa-check text-gray-500 mt-2 text-sm"></i>
+        <span class="text-lg sm:text-xl leading-snug">Global keyboard shortcuts</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <i class="fa-solid fa-check text-gray-500 mt-2 text-sm"></i>
+        <span class="text-lg sm:text-xl border-b border-gray-400 leading-snug">Application menu</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <i class="fa-solid fa-check text-gray-500 mt-2 text-sm"></i>
+        <span class="text-lg sm:text-xl border-b border-gray-400 leading-snug">Context menu</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <i class="fa-solid fa-check text-gray-500 mt-2 text-sm"></i>
+        <span class="text-lg sm:text-xl border-b border-gray-400 leading-snug">Dock/Icon</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <i class="fa-solid fa-check text-gray-500 mt-2 text-sm"></i>
+        <span class="text-lg sm:text-xl border-b border-gray-400 leading-snug">Isolated browser views</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <i class="fa-solid fa-check text-gray-500 mt-2 text-sm"></i>
+        <span class="text-lg sm:text-xl border-b border-gray-400 leading-snug">File system access</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <i class="fa-solid fa-check text-gray-500 mt-2 text-sm"></i>
+        <span class="text-lg sm:text-xl border-b border-gray-400 leading-snug">…plus more APIs in our docs</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right: code window + macOS dock (no grid, no mouse parallax) -->
+  <div class="relative w-full max-w-xl mx-auto aspect-square sm:aspect-[5/4] min-w-0">
+    <!-- Code window -->
+    <div class="absolute z-10 top-[2%] left-0 w-[90%] rounded-xl bg-gray-900 shadow-lg overflow-hidden">
+      <div class="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-3 border-b border-white/10">
+        <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-400"></span>
+        <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-yellow-400"></span>
+        <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-400"></span>
+        <span class="ml-2 text-[10px] sm:text-xs text-gray-400">App.js</span>
+      </div>
+      <pre class="px-3 py-3 sm:px-5 sm:py-4 text-[10px] leading-4 sm:text-sm sm:leading-6 text-gray-100 overflow-x-auto"><code><span class="text-pink-400">import</span> {
+   <span class="text-sky-300">dock</span>,
+   <span class="text-sky-300">isDesktopApp</span>
+} <span class="text-pink-400">from</span> <span class="text-emerald-300">'@todesktop/core'</span>
+
+<span class="text-pink-400">if</span> (isDesktopApp) {
+   dock.<span class="text-yellow-300">bounce</span>()
+   dock.<span class="text-yellow-300">setBadge</span>(<span class="text-orange-300">3</span>)
+}</code></pre>
+    </div>
+
+    <!-- macOS dock (bigger icons) -->
+    <div
+      class="absolute z-20 bottom-[2%] right-0 w-full sm:w-[92%] rounded-2xl border border-gray-200 bg-white/80 backdrop-blur shadow-md px-3 py-2 sm:px-5 sm:py-3 flex items-end justify-center gap-2 sm:gap-4"
+    >
+      <!-- Finder -->
+      <div class="w-11 h-11 min-[400px]:w-14 min-[400px]:h-14 sm:w-20 sm:h-20 rounded-xl sm:rounded-3xl bg-gradient-to-b from-sky-300 to-blue-500 flex items-center justify-center text-white text-xl min-[400px]:text-3xl sm:text-4xl">
+        <i class="fa-regular fa-face-smile"></i>
+      </div>
+
+      <!-- Your app icon (bounces + "3" badge) -->
+      <div class="dock-bounce relative w-11 h-11 min-[400px]:w-14 min-[400px]:h-14 sm:w-20 sm:h-20 rounded-xl sm:rounded-3xl border-2 border-dashed border-gray-300 bg-white flex items-center justify-center text-gray-400 text-xl min-[400px]:text-3xl sm:text-4xl">
+        <i class="fa-solid fa-desktop"></i>
+        <span class="absolute -top-1.5 -right-1.5 min-w-4 h-4 min-[400px]:min-w-5 min-[400px]:h-5 sm:min-w-6 sm:h-6 px-1 rounded-full bg-red-500 text-white text-[10px] sm:text-sm font-semibold flex items-center justify-center">3</span>
+      </div>
+
+      <!-- Messages (badge "1" shows and hides) -->
+      <div class="relative w-11 h-11 min-[400px]:w-14 min-[400px]:h-14 sm:w-20 sm:h-20 rounded-xl sm:rounded-3xl bg-gradient-to-b from-green-300 to-green-500 flex items-center justify-center text-white text-xl min-[400px]:text-3xl sm:text-4xl">
+        <i class="fa-solid fa-message"></i>
+        <span class="msg-badge absolute -top-1.5 -right-1.5 min-w-4 h-4 min-[400px]:min-w-5 min-[400px]:h-5 sm:min-w-6 sm:h-6 px-1 rounded-full bg-red-500 text-white text-[10px] sm:text-sm font-semibold flex items-center justify-center">1</span>
+      </div>
+
+      <!-- Mail -->
+      <div class="w-11 h-11 min-[400px]:w-14 min-[400px]:h-14 sm:w-20 sm:h-20 rounded-xl sm:rounded-3xl bg-gradient-to-b from-sky-300 to-blue-500 flex items-center justify-center text-white text-xl min-[400px]:text-3xl sm:text-4xl">
+        <i class="fa-solid fa-envelope"></i>
       </div>
     </div>
   </div>

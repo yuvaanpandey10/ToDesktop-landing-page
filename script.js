@@ -100,3 +100,59 @@ setupIntersectionObserver(line3, true, 0.05);
     start();
   });
 })();
+
+
+// ---- Step 2: smooth mouse-move parallax ----
+(function () {
+  const card = document.getElementById("step-2");
+  if (!card) return;
+
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!canHover || reduceMotion) return;
+
+  const layers = Array.from(card.querySelectorAll("[data-depth]")).map((el) => ({
+    el,
+    depth: parseFloat(el.dataset.depth),
+    x: 0,
+    y: 0,
+  }));
+
+  let targetX = 0;
+  let targetY = 0;
+  let running = false;
+
+  function animate() {
+    let moving = false;
+    layers.forEach((l) => {
+      const goalX = targetX * l.depth;
+      const goalY = targetY * l.depth;
+      l.x += (goalX - l.x) * 0.08;
+      l.y += (goalY - l.y) * 0.08;
+      if (Math.abs(goalX - l.x) > 0.05 || Math.abs(goalY - l.y) > 0.05) moving = true;
+      l.el.style.translate = `${l.x.toFixed(2)}px ${l.y.toFixed(2)}px`;
+    });
+    if (moving) requestAnimationFrame(animate);
+    else running = false;
+  }
+
+  function start() {
+    if (!running) {
+      running = true;
+      requestAnimationFrame(animate);
+    }
+  }
+
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    start();
+  });
+
+  card.addEventListener("mouseleave", () => {
+    targetX = 0;
+    targetY = 0;
+    start();
+  });
+})();

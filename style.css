@@ -85,3 +85,60 @@ h3 {
     animation: none;
   }
 }
+
+/* ---- Step 2: "Optional" hint (9s cycle: ~3s visible, ~6s gap) ---- */
+.step2-hint {
+  opacity: 0;
+  animation: hint-cycle 9s ease-in-out infinite;
+}
+.step2-hint-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: hint-draw 9s ease-in-out infinite;
+}
+@keyframes hint-cycle {
+  0%   { opacity: 0; transform: translateX(8px); }
+  6%   { opacity: 1; transform: translateX(0); }
+  28%  { opacity: 1; transform: translateX(0); }
+  34%  { opacity: 0; transform: translateX(8px); }
+  100% { opacity: 0; transform: translateX(8px); }
+}
+@keyframes hint-draw {
+  0%   { stroke-dashoffset: 1; }
+  10%  { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* ---- Step 2: dock icon bounce (every ~4s) ---- */
+.dock-bounce {
+  animation: dock-bounce 4s ease-in-out infinite;
+}
+@keyframes dock-bounce {
+  0%, 40%, 100% { transform: translateY(0); }
+  8%  { transform: translateY(-14px); }
+  16% { transform: translateY(0); }
+  24% { transform: translateY(-8px); }
+  32% { transform: translateY(0); }
+}
+
+/* ---- Step 2: Messages badge "1" pops in, stays, pops out (7s cycle) ---- */
+.msg-badge {
+  opacity: 0;
+  transform: scale(0);
+  animation: msg-badge 7s ease-in-out infinite;
+}
+@keyframes msg-badge {
+  0%, 10% { opacity: 0; transform: scale(0); }
+  16%     { opacity: 1; transform: scale(1.2); }
+  20%     { opacity: 1; transform: scale(1); }
+  62%     { opacity: 1; transform: scale(1); }
+  68%     { opacity: 0; transform: scale(0); }
+  100%    { opacity: 0; transform: scale(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step2-hint { animation: none; opacity: 1; }
+  .step2-hint-path { animation: none; stroke-dashoffset: 0; }
+  .dock-bounce { animation: none; }
+  .msg-badge { animation: none; opacity: 1; transform: none; }
+}
