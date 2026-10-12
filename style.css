@@ -12,7 +12,9 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
 }
 
@@ -20,7 +22,66 @@ h1, h2, h3{
   background-image:
     linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
-  background-size: 64px 64px; /* was 28px. Use 80px for even bigger */
+  background-size: 140px 64px; /* was 28px. Use 80px for even bigger */
   -webkit-mask-image: linear-gradient(to bottom, transparent 35%, black 100%);
   mask-image: linear-gradient(to bottom, transparent 35%, black 100%);
+}
+
+/* Auto on/off toggle (full cycle = 5 seconds) */
+.auto-toggle {
+  animation: toggle-track 5s ease-in-out infinite;
+}
+.auto-toggle-knob {
+  animation: toggle-knob 5s ease-in-out infinite;
+}
+
+/* OFF (dark) -> ON (blue) -> OFF, holding each state ~2s */
+@keyframes toggle-track {
+  0%,
+  40% {
+    background-color: #1f2937;
+  } /* off: gray-800 */
+  50%,
+  90% {
+    background-color: #3b82f6;
+  } /* on: blue-500 */
+  100% {
+    background-color: #1f2937;
+  }
+}
+@keyframes toggle-knob {
+  0%,
+  40% {
+    transform: translateX(0);
+  }
+  50%,
+  90% {
+    transform: translateX(14px);
+  } /* sm and up: 16px, see below */
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 640px) {
+  @keyframes toggle-knob {
+    0%,
+    40% {
+      transform: translateX(0);
+    }
+    50%,
+    90% {
+      transform: translateX(16px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auto-toggle,
+  .auto-toggle-knob {
+    animation: none;
+  }
 }
